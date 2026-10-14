@@ -59,9 +59,6 @@ st.subheader("📊 Thống kê kết quả học tập")
 
 c1, c2, c3, c4 = st.columns(4)
 
-```python
-c1, c2, c3, c4 = st.columns(4)
-
 # Tìm sinh viên có điểm cao nhất và thấp nhất
 sv_cao_nhat = df.loc[df["Điểm tổng kết"].idxmax()]
 sv_thap_nhat = df.loc[df["Điểm tổng kết"].idxmin()]
@@ -87,7 +84,6 @@ c4.metric(
     "Số sinh viên đạt",
     f"{(df['Điểm tổng kết'] >= 5).sum()}/{len(df)}"
 )
-```
 
 # 6. Bảng điểm hoàn chỉnh
 st.subheader("📋 Bảng điểm sinh viên")
