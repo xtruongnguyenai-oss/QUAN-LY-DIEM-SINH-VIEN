@@ -59,22 +59,35 @@ st.subheader("📊 Thống kê kết quả học tập")
 
 c1, c2, c3, c4 = st.columns(4)
 
+```python
+c1, c2, c3, c4 = st.columns(4)
+
+# Tìm sinh viên có điểm cao nhất và thấp nhất
+sv_cao_nhat = df.loc[df["Điểm tổng kết"].idxmax()]
+sv_thap_nhat = df.loc[df["Điểm tổng kết"].idxmin()]
+
 c1.metric(
     "Điểm trung bình",
     f"{df['Điểm tổng kết'].mean():.2f}"
 )
+
 c2.metric(
     "Điểm cao nhất",
-    f"{df['Điểm tổng kết'].max():.2f}"
+    f"{sv_cao_nhat['Điểm tổng kết']:.2f}"
 )
+c2.write(f"Sinh viên: {sv_cao_nhat['Họ và tên']}")
+
 c3.metric(
     "Điểm thấp nhất",
-    f"{df['Điểm tổng kết'].min():.2f}"
+    f"{sv_thap_nhat['Điểm tổng kết']:.2f}"
 )
+c3.write(f"Sinh viên: {sv_thap_nhat['Họ và tên']}")
+
 c4.metric(
     "Số sinh viên đạt",
     f"{(df['Điểm tổng kết'] >= 5).sum()}/{len(df)}"
 )
+```
 
 # 6. Bảng điểm hoàn chỉnh
 st.subheader("📋 Bảng điểm sinh viên")
@@ -132,3 +145,4 @@ plt.close(fig)
 st.divider()
 st.caption("BÀI TẬP PYTHON - QUẢN LÝ ĐIỂM SINH VIÊN")
 st.write("Người thực hiện: Nguyễn Ái Xuân Trường")
+st.write("MSSV: 072208001518")
