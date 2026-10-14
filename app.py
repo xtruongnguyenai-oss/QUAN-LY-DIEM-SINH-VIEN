@@ -11,7 +11,7 @@ du_lieu = {
 
 df = pd.DataFrame(du_lieu)
 
-display(df)
+st.dataframe(df)
 
 #2. Tính điểm tổng kết
 df['Điểm tổng kết']= (
@@ -19,7 +19,7 @@ df['Điểm tổng kết']= (
     + df["Điểm giữa kỳ"] * 0.3
     + df["Điểm cuối kỳ"] * 0.5
 )
-display(df)
+st.dataframe(df)
 
 #3. Xếp loại sinh viên
 def xep_loai(diem):
@@ -34,7 +34,7 @@ def xep_loai(diem):
 
 df["Xếp loại"] = df["Điểm tổng kết"].apply(xep_loai)
 
-display(df)
+st.dataframe(df)
 
 # 4. Thống kê điểm sinh viên
 
