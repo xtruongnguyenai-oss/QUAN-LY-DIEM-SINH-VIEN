@@ -132,4 +132,3 @@ plt.close(fig)
 st.divider()
 st.caption("BÀI TẬP PYTHON - QUẢN LÝ ĐIỂM SINH VIÊN")
 st.write("Người thực hiện: [Nguyễn Ái Xuân Trường]")
-```
