@@ -131,4 +131,4 @@ plt.close(fig)
 # 9. Thông tin người thực hiện
 st.divider()
 st.caption("BÀI TẬP PYTHON - QUẢN LÝ ĐIỂM SINH VIÊN")
-st.write("Người thực hiện: [Nguyễn Ái Xuân Trường]")
+st.write("Người thực hiện: Nguyễn Ái Xuân Trường")
